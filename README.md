@@ -1,4 +1,4 @@
-# Legendary Manifest Installer
+# Legendary Manifest Installer (Made by ai because im to lazy to do it myself)
 
 A simple GUI for downloading specific Fortnite builds using manifest files, no Epic Games Launcher needed.
 
@@ -68,3 +68,5 @@ It shows live progress and an ETA while it runs. You can stop it at any time and
 - **Login failed** — make sure you only copied the code value, not the whole JSON
 - **Download keeps erroring** — just restart it, it resumes automatically
 - **App won't open** — make sure you're on Windows 10/11 64-bit
+
+## Credits to Legendary for hte main stuff 
