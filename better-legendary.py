@@ -54,10 +54,11 @@ def pill_btn(parent, text, command=None, style="accent", **kw):
         "ghost":   (SURFACE3,  SUBTEXT, SURFACE2),
         "success": ("#0d2e1a", SUCCESS, "#0f3820"),
     }.get(style, (ACCENT, TEXT, ACCENT2))
-    btn = tk.Button(parent, text=text, command=command,
-                    bg=p[0], fg=p[1], activebackground=p[2], activeforeground=p[1],
-                    relief="flat", cursor="hand2", font=FMD, bd=0,
-                    padx=16, pady=8, **kw)
+    btn_kw = dict(bg=p[0], fg=p[1], activebackground=p[2], activeforeground=p[1],
+                  relief="flat", cursor="hand2", font=FMD, bd=0,
+                  padx=16, pady=8)
+    btn_kw.update(kw)
+    btn = tk.Button(parent, text=text, command=command, **btn_kw)
     btn.bind("<Enter>", lambda e: btn.config(bg=p[2]))
     btn.bind("<Leave>", lambda e: btn.config(bg=p[0]))
     return btn
